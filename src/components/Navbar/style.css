@@ -1,0 +1,53 @@
+#navbar {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    top: 0;
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+.links-1 {
+    display: flex;
+    flex: 2;
+    justify-content: space-around;
+    min-width: 50vw;
+}
+
+.links-2 {
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: space-around; */
+    flex: 2;
+    min-width: 50vw;
+}
+
+.links-1 > a, .links-2 > a {
+    text-decoration: none;
+}
+
+.links-1 :hover {
+    font-size: 1.35em;
+    font-weight: 700;
+    position: relative;
+}
+
+.links-1 > a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0px;
+    left: 0;
+    z-index: 999999;
+    background-color: #000;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.links-1 > a:hover::before {
+    z-index: 999999;
+    visibility: visible;
+    transform: scaleX(1);
+}
