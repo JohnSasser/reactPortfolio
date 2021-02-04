@@ -9,45 +9,32 @@
 
 .links-1 {
     display: flex;
-    flex: 2;
+    flex: 1;
     justify-content: space-around;
     min-width: 50vw;
+    left: 20%;
 }
 
 .links-2 {
     display: flex;
     justify-content: space-around;
-    /* justify-content: space-around; */
     flex: 2;
     min-width: 50vw;
 }
 
-.links-1 > a, .links-2 > a {
+.links-1 > a,  .links-2 > a {
+    color: black;
     text-decoration: none;
+    font-size: 1.5em;
+	background: linear-gradient( rgba(255, 71, 71, .8 ), rgba(248, 66, 66, .8 )) left bottom / 0 .8em no-repeat;
+	transition: .5s background-size;
 }
 
-.links-1 :hover {
-    font-size: 1.35em;
-    font-weight: 700;
-    position: relative;
+.links-1 > a:hover, .links-2 > a:hover {
+    /* line-height: .5px; */
+    background-size: 100% .1em;
 }
 
-.links-1 > a::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0px;
-    left: 0;
-    z-index: 999999;
-    background-color: #000;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.5s ease-in-out 0s;
-}
-
-.links-1 > a:hover::before {
-    z-index: 999999;
-    visibility: visible;
-    transform: scaleX(1);
+.links-1 > a:visited,  .links-2 > a:visited {
+    color: black;
 }

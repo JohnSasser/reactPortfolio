@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import './style.css';
-import Homepage from '../../views/Homepage';
 
 const Navbar = props => {
   return (
@@ -13,9 +12,8 @@ const Navbar = props => {
             Contact Me
           </Link>
           <Link id="resume-link" to="/resume">
-            resume´
+            Resume´
           </Link>
-          
         </div>
         <div className="links-2">
           <Link id="homepage-link" to="/">
@@ -27,13 +25,9 @@ const Navbar = props => {
           <Link id="portfolio-link" to="/portfolio">
             Portfolio
           </Link>
-          
         </div>
 
         <switch>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
           <Route path="/about-me">{/* <AboutMe /> */}</Route>
           <Route path="/portfolio">{/* <Portfolio /> */}</Route>
           <Route path="/contact">{/* <Contact /> */}</Route>
