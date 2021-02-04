@@ -1,5 +1,6 @@
 #navbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30vw 30vw 40vw;
     height: 9.8vh;
     align-items: center;
     top: 0;
@@ -12,7 +13,7 @@
     display: flex;
     flex: 1;
     justify-content: space-around;
-    min-width: 50vw;
+    /* min-width: 50vw; */
     left: 20%;
 }
 
@@ -20,7 +21,7 @@
     display: flex;
     justify-content: space-around;
     flex: 2;
-    min-width: 50vw;
+    /* min-width: 50vw; */
 }
 
 .links-1 > a,  .links-2 > a {
@@ -34,8 +35,10 @@
 .links-1 > a:hover, .links-2 > a:hover {
     /* line-height: .5px; */
     background-size: 100% .1em;
+    text-decoration: none;
 }
 
 .links-1 > a:visited,  .links-2 > a:visited {
     color: black;
+    text-decoration: none;
 }

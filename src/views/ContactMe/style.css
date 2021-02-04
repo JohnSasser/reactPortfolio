@@ -1,12 +1,15 @@
 #email-container {
     height: 80vh;
     display: grid;
-    grid-template-columns: 60vw 40vw;
+    grid-template-columns: 45vw 55vw;
+    /* margin: 3em; */
 }
 
 #email-container > form {
     width: 75%;
     margin: 0 auto;
+    margin-top: 5em;
+    margin-left: 5em;
 }
 
 .contactContainer {
@@ -19,21 +22,17 @@
 	line-height: 2em;
 }
 
-/* .contactContainer input,
-textarea {
-    text-align: center;
-    height: 50vh;
-    width: 30vw;
-} */
-
-/* form {
-    height: 200%;
-    width: 200%;
+.contact-icon-div {
+    font-size: 3em;
+    margin-bottom: 2em;
+    line-height: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-input > .form-control {
-    height: 200%;
+.contact-card-title > svg {
+    height: 2em;
+    width: 2em;
 }
-div.form-group {
-    width: 50%;
-} */

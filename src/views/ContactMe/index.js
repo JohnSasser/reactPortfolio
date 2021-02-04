@@ -2,6 +2,8 @@ import React from 'react';
 import Footer from '../../components/Footer';
 
 import { Form, Button } from 'react-bootstrap';
+// import { FaBeer } from 'react-icons/fa';
+import { MdEmail, MdPhoneIphone } from 'react-icons/md';
 
 import './style.css';
 
@@ -9,12 +11,15 @@ const ContactMe = () => {
   return (
     <>
       <div class="card-body cardContainer" id="email-container">
-        <h2 class="card-title email-header">
-          SHOOT ME AN EMAIL @ cw.john.sasser@gmail.com
-        </h2>
+        <div className="contact-icon-div">
+          <p class="contact-card-title email-address">
+            <MdEmail style={{ height: '2em' }} /> cw.john.sasser@gmail.com
+          </p>
+          <p className="contact-card-title phone-number">
+            <MdPhoneIphone /> (770) 853-8466
+          </p>
+        </div>
         {/* 
-        
-
         <form
           action="https://formspree.io/xbjojbro"
           method="POST"
@@ -65,27 +70,39 @@ const ContactMe = () => {
           target="_blank"
         >
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>name</Form.Label>
+            <Form.Label>Name</Form.Label>
             <Form.Control
               htmlFor="contact"
               name="name"
               class="form-control"
-              type="name"
+              type="text"
               placeholder="name"
             />
           </Form.Group>
 
           <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="name@example.com" />
+            <Form.Control
+              type="email"
+              htmlFor="contact"
+              name="_replyto"
+              class="form-control"
+              placeholder="email@example.com"
+            />
           </Form.Group>
 
           <Form.Group controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Example textarea</Form.Label>
-            <Form.Control htmlFor="" as="textarea" rows={16} />
+            <Form.Label>Message Field</Form.Label>
+            <Form.Control
+              htmlFor="contact"
+              name="message"
+              placeholder="message"
+              as="textarea"
+              rows={16}
+            />
           </Form.Group>
 
-          <Button variant="primary" type="submit">
+          <Button variant="primary" type="submit" value="Send">
             Submit
           </Button>
         </Form>{' '}
