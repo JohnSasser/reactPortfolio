@@ -2,7 +2,6 @@ import React from 'react';
 import Particles from 'react-tsparticles';
 
 import './style.css';
-import Footer from '../../components/Footer';
 
 const Homepage = () => {
   const particleOptions = {
@@ -88,7 +87,7 @@ const Homepage = () => {
     <div id="homepage-container">
       <Particles id="tsparticles" options={particleOptions}></Particles>{' '}
       <h1 id="title-line"> Software Developer </h1>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

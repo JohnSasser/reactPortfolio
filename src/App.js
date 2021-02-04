@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Homepage from './views/Homepage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ContactMe from './views/ContactMe';
 
 function App() {
   return (
@@ -14,7 +16,9 @@ function App() {
           </Route>
           <Route path="/about-me">{/* <AboutMe /> */}</Route>
           <Route path="/portfolio">{/* <Portfolio /> */}</Route>
-          <Route path="/contact">{/* <Contact /> */}</Route>
+          <Route path="/contact-me">
+            <ContactMe />
+          </Route>
         </switch>
       </Router>
     </div>

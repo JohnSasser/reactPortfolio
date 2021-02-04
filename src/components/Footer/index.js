@@ -1,5 +1,4 @@
 import React from 'react';
-import footerSvg from '../../Wave-footer.svg';
 
 import './style.css';
 

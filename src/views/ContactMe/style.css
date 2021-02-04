@@ -1,1 +1,39 @@
+#email-container {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+}
 
+#email-container > form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.contactContainer {
+	/* height: 100vh; */
+	margin-top: 0;
+}
+
+.email-header {
+	padding-top: 4vh;
+	line-height: 2em;
+}
+
+/* .contactContainer input,
+textarea {
+    text-align: center;
+    height: 50vh;
+    width: 30vw;
+} */
+
+/* form {
+    height: 200%;
+    width: 200%;
+}
+
+input > .form-control {
+    height: 200%;
+}
+div.form-group {
+    width: 50%;
+} */
