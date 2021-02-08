@@ -13,10 +13,15 @@ const ContactMe = () => {
       <div id="email-container">
         <div className="contact-icon-div">
           <p className="contact-card-title email-address">
-            <MdEmail style={{ height: '2em' }} /> cw.john.sasser@gmail.com
-          </p>
-          <p className="contact-card-title phone-number">
-            <MdPhoneIphone /> (770) 853-8466
+            <MdEmail style={{ height: '2em' }} />{' '}
+            <span className="contact-credentials">
+              cw.john.sasser@gmail.com
+            </span>
+            {/* <p className="contact-card-title phone-number"> */}
+            <br />
+            <MdPhoneIphone />{' '}
+            <span className="contact-credentials">(770) 853-8466</span>
+            {/* </p>{' '} */}
           </p>
         </div>
         <Form
@@ -53,7 +58,7 @@ const ContactMe = () => {
               name="message"
               placeholder="message"
               as="textarea"
-              rows={16}
+              rows={12}
             />
           </Form.Group>
 

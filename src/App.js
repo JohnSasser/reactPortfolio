@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
 import ContactMe from './views/ContactMe';
 import AboutMe from './views/AboutMe';
+import Resume from './views/Resume';
 
 import './App.css';
 
@@ -22,6 +23,9 @@ function App() {
         <Route path="/portfolio">{/* <Portfolio /> */}</Route>
         <Route path="/contact-me">
           <ContactMe />
+        </Route>
+        <Route path="/resume">
+          <Resume />
         </Route>
       </Router>
     </div>
