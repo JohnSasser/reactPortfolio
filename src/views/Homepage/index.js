@@ -42,13 +42,13 @@ const Homepage = () => {
     },
     particles: {
       color: {
-        value: '#000',
+        value: '#A8E6CE00',
       },
       links: {
         color: '#000111',
         distance: 150,
         enable: true,
-        opacity: 0.5,
+        opacity: 0.25,
         width: 1,
       },
       collisions: {
@@ -86,8 +86,11 @@ const Homepage = () => {
   return (
     <div id="homepage-container">
       <Particles id="tsparticles" options={particleOptions}></Particles>{' '}
-      <h1 id="title-line"> Software Developer </h1>
-      {/* <Footer /> */}
+      <h1 id="title-line" className="homepage-title">
+        {' '}
+        John B Sasser{' '}
+      </h1>
+      <h4 className="homepage-title">Software Developer</h4>
     </div>
   );
 };

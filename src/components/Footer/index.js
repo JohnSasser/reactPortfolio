@@ -6,26 +6,21 @@ const Footer = () => {
   return (
     <div className="footer-parent-div">
       <p className="name-date">
-        <sapn>
+        <span>
           John Sasser <span>&#169;</span> 2020{' '}
-        </sapn>
+        </span>
       </p>
 
       <p className="loading-io-attribution">
         <a
           href="https://loading.io/background/m-wave/"
           target="blank"
-          norefferer
+          norefferer="true"
         >
           {' '}
           m-wave{' '}
         </a>
       </p>
-      {/* <img
-        src={footerSvg}
-        alt="ARC-logo"
-        style={{ height: '4em', width: '100vw' }}
-      /> */}
     </div>
   );
 };
