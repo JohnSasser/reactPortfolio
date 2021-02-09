@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import { Form, Button } from 'react-bootstrap';
 // import { FaBeer } from 'react-icons/fa';
 import { MdEmail, MdPhoneIphone } from 'react-icons/md';
+import { FaStrava, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 import './style.css';
 
@@ -13,15 +14,28 @@ const ContactMe = () => {
       <div id="email-container">
         <div className="contact-icon-div">
           <p className="contact-card-title email-address">
+            <span id="link-icons">
+              <a
+                id="linkedin-icon"
+                href="https://www.linkedin.com/in/john-sasser-does-javascript/"
+                target="blank"
+              >
+                <FaLinkedin className="link-icon" />
+              </a>
+              <a id="github-icon" href="https://github.com/JohnSasser" target="blank">
+                <FaGithub className="link-icon" />
+              </a>
+              <a id="strava-icon"  href="https://www.strava.com/athletes/62855407" target="blank">
+                <FaStrava className="link-icon" />
+              </a>
+            </span>
             <MdEmail style={{ height: '2em' }} />{' '}
             <span className="contact-credentials">
               cw.john.sasser@gmail.com
             </span>
-            {/* <p className="contact-card-title phone-number"> */}
             <br />
             <MdPhoneIphone />{' '}
             <span className="contact-credentials">(770) 853-8466</span>
-            {/* </p>{' '} */}
           </p>
         </div>
         <Form

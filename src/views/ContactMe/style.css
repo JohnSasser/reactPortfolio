@@ -58,6 +58,40 @@
     font-size: 2.25em;
     font-weight: 800;
 }
+#link-icons {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a > svg {
+    margin: 0;
+    color: white;
+}
+
+#strava-icon :hover {
+    color: #FC5304;
+    background-color: rgba(255, 255, 255);
+    border-radius: 8px;
+}
+
+#linkedin-icon :hover {
+    color: #0B66C2;
+    background-color: rgba(255, 255, 255);   
+     border-radius: 8px;
+
+}
+
+#github-icon :hover {
+    color: #171C21;
+    background-color: rgba(255, 255, 255);  
+      border-radius: 8px;
+
+}
+
+/* a > svg:hover {
+    color: rgba(248, 85, 115, 0.81); 
+} */
 
 .form-label {
     line-height: 1.5em;
