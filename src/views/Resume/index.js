@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
+import { Button } from 'react-bootstrap';
 
 import resume from '../../software-engineer-resume.pdf';
 
@@ -29,38 +30,65 @@ export default function Resume() {
   return (
     <div id="pdf-container">
       {' '}
-      <div
-        id="button-container"
-        style={{
-          display: 'grid',
-          gridTemplateColumns: '30vw 40vw 30vw',
-          margin: '0 auto',
-        }}
-      >
-        <button
-          style={{ width: '80px', height: '80px', margin: '0 auto' }}
-          onClick={previousPage}
-          id="button-forward"
-          className={
-            pageNumber > numPages - 1 ? 'active-button' : 'inactive-button'
-          }
-        >
-          previous page
-        </button>
+      <div id="button-container">
+        {pageNumber > numPages - 1 ? (
+          <Button
+            // style={{ width: '80px', height: '80px', margin: '0 auto' }}
+            onClick={previousPage}
+            id="button-forward"
+            variant={pageNumber > numPages - 1 ? 'info' : 'secondary'}
+            className={
+              pageNumber > numPages - 1 ? 'active-button' : 'inactive-button'
+            }
+          >
+            previous page
+          </Button>
+        ) : (
+          <Button
+            // style={{ width: '80px', height: '80px', margin: '0 auto' }}
+            onClick={previousPage}
+            id="button-forward"
+            variant={pageNumber > numPages - 1 ? 'info' : 'secondary'}
+            className={
+              pageNumber > numPages - 1 ? 'active-button' : 'inactive-button'
+            }
+            disabled
+          >
+            previous page
+          </Button>
+        )}
         <p>
           Page {pageNumber} of {numPages}
         </p>
-        <button
-          style={{ width: '80px', height: '80px', margin: '0 auto' }}
-          onClick={nextPage}
-          id="button-back"
-          className={
-            pageNumber < numPages ? 'active-button' : 'inactive-button'
-          }
-        >
-          {' '}
-          next page
-        </button>
+
+        {pageNumber > numPages - 1 ? (
+          <Button
+            // style={{ width: '80px', height: '80px', margin: '0 auto' }}
+            onClick={nextPage}
+            id="button-back"
+            variant={pageNumber > numPages - 1 ? 'secondary' : 'info'}
+            className={
+              pageNumber < numPages ? 'active-button' : 'inactive-button'
+            }
+            disabled
+          >
+            {' '}
+            next page
+          </Button>
+        ) : (
+          <Button
+            // style={{ width: '80px', height: '80px', margin: '0 auto' }}
+            onClick={nextPage}
+            id="button-back"
+            variant={pageNumber > numPages - 1 ? 'secondary' : 'info'}
+            className={
+              pageNumber < numPages ? 'active-button' : 'inactive-button'
+            }
+          >
+            {' '}
+            next page
+          </Button>
+        )}
       </div>
       <div
         id="pdf-container"

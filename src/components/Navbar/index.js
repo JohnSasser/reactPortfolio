@@ -9,21 +9,25 @@ const Navbar = props => {
       {' '}
       <div></div>
       <div className="links-1">
-        <Link id="homepage-link" to="/">
-          Home
-        </Link>
-
         <Link id="about-me-link" to="/about-me">
           About Me
         </Link>
+
+        <p>||</p>
 
         <Link id="portfolio-link" to="/portfolio">
           Portfolio
         </Link>
 
+        <Link id="homepage-link" to="/" style={{ padding: '0 2em' }}>
+          Home
+        </Link>
+
         <Link id="contact-me-link" to="/contact-me">
           Contact Me
         </Link>
+
+        <p>||</p>
 
         <Link id="resume-link" to="/resume">
           Resume´
