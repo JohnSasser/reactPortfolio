@@ -19,13 +19,24 @@ const ContactMe = () => {
                 id="linkedin-icon"
                 href="https://www.linkedin.com/in/john-sasser-does-javascript/"
                 target="blank"
+                norefferrer="true"
               >
                 <FaLinkedin className="link-icon" />
               </a>
-              <a id="github-icon" href="https://github.com/JohnSasser" target="blank">
+              <a
+                id="github-icon"
+                href="https://github.com/JohnSasser"
+                target="blank"
+                norefferrer="true"
+              >
                 <FaGithub className="link-icon" />
               </a>
-              <a id="strava-icon"  href="https://www.strava.com/athletes/62855407" target="blank">
+              <a
+                id="strava-icon"
+                href="https://www.strava.com/athletes/62855407"
+                target="blank"
+                norefferrer="true"
+              >
                 <FaStrava className="link-icon" />
               </a>
             </span>

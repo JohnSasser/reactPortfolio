@@ -3,6 +3,8 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 
 import resume from '../../software-engineer-resume.pdf';
 
+import './style.css';
+
 let pdfFilePath = process.env.PUBLIC_URL + '/software-engineer-resume.pdf';
 
 export default function Resume() {
@@ -22,73 +24,58 @@ export default function Resume() {
     setPageNumber(pageNumber - 1);
   }
 
+  console.log('numPages:', numPages);
+  console.log('pageNumber:', pageNumber);
   return (
-    <div>
-      <button onClick={nextPage} id="button-back"></button>
-      Page {pageNumber} of {numPages}
-      <button onClick={previousPage} id="button-forward"></button>
-      <Document
-        id="react-pdf-doc"
-        file={resume}
-        // file={process.env.PUBLIC_URL + '/software-engineer-resume.pdf'}
-        onLoadSuccess={onDocumentLoadSuccess}
+    <div id="pdf-container">
+      {' '}
+      <div
+        id="button-container"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: '30vw 40vw 30vw',
+          margin: '0 auto',
+        }}
       >
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p></p>
+        <button
+          style={{ width: '80px', height: '80px', margin: '0 auto' }}
+          onClick={previousPage}
+          id="button-forward"
+          className={
+            pageNumber > numPages - 1 ? 'active-button' : 'inactive-button'
+          }
+        >
+          previous page
+        </button>
+        <p>
+          Page {pageNumber} of {numPages}
+        </p>
+        <button
+          style={{ width: '80px', height: '80px', margin: '0 auto' }}
+          onClick={nextPage}
+          id="button-back"
+          className={
+            pageNumber < numPages ? 'active-button' : 'inactive-button'
+          }
+        >
+          {' '}
+          next page
+        </button>
+      </div>
+      <div
+        id="pdf-container"
+        style={{ display: 'flex', justifyContent: 'center' }}
+      >
+        <Document
+          id="react-pdf-doc"
+          file={resume}
+          // file={pdfFilePath}
+          onLoadSuccess={onDocumentLoadSuccess}
+        >
+          <Page pageNumber={pageNumber} />
+          {/* <Page pageNumber={pageNumber + 1} /> */}
+        </Document>
+      </div>
     </div>
   );
 }
-
-// export default Resume;
-
-// import React, { useState } from 'react';
-// import { Document, Page } from 'react-pdf/dist/esm/entry.parcel';
-// import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-
-// // import './Sample.less';
-
-// // import pdfFile from '../../software-engineer-resume.pdf';
-
-// const options = {
-//   cMapUrl: 'cmaps/',
-//   cMapPacked: true,
-// };
-
-// export default function Resume() {
-//   const [file, setFile] = useState(pdfFile);
-//   const [numPages, setNumPages] = useState(null);
-
-//   // function onFileChange(event) {
-//   //   setFile(event.target.files[0]);
-//   // }
-
-//   function onDocumentLoadSuccess({ numPages: nextNumPages }) {
-//     setNumPages(nextNumPages);
-//   }
-
-//   return (
-//     <div className="Example">
-//       <header>
-//         <h1>react-pdf sample page</h1>
-//       </header>
-//       <div className="Example__container">
-//         {/* <div className="Example__container__load">
-//           <label htmlFor="file">Load from file:</label>{' '}
-//           <input onChange={onFileChange} type="file" />
-//         </div> */}
-//         <div className="Example__container__document">
-//           <Document
-//             file={file}
-//             onLoadSuccess={onDocumentLoadSuccess}
-//             options={options}
-//           >
-//             {Array.from(new Array(numPages), (el, index) => (
-//               <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-//             ))}
-//           </Document>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }

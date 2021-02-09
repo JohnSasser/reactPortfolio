@@ -1,9 +1,16 @@
-.react-pdf__Page__canvas {
-    /* display: flex; */
-    /* justify-content: center; */
-    margin: 0 auto;
+#button-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw ;
+    align-items: center;
 }
 
-canvas {
-    margin: 0 auto;
+#pdf-container {
+height: 80vh;
+/* overflow: hidden; */
+}
+
+.inactive-button {
+    cursor: none;
+    background-color: white;
 }
