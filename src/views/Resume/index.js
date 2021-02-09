@@ -68,7 +68,7 @@ export default function Resume() {
       >
         <Document
           id="react-pdf-doc"
-          file={resume}
+          file={pdfFilePath}
           // file={pdfFilePath}
           onLoadSuccess={onDocumentLoadSuccess}
         >
