@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Homepage from './views/Homepage';
 import Navbar from './components/Navbar';
@@ -14,7 +14,8 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Route exact path="/">
+        {/* <Homepage /> */}
+        <Route path="/">
           <Homepage />
         </Route>
         <Route path="/about-me">
@@ -33,19 +34,3 @@ function App() {
 }
 
 export default App;
-{
-  /* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */
-}

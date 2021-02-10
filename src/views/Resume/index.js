@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import { Button } from 'react-bootstrap';
+import { FaFileDownload } from 'react-icons/fa';
 
 import resume from '../../software-engineer-resume.pdf';
 
@@ -28,7 +29,7 @@ export default function Resume() {
   console.log('numPages:', numPages);
   console.log('pageNumber:', pageNumber);
   return (
-    <div id="pdf-container">
+    <div id="resume-page-container">
       {' '}
       <div id="button-container">
         {pageNumber > numPages - 1 ? (
@@ -57,9 +58,14 @@ export default function Resume() {
             previous page
           </Button>
         )}
-        <p>
-          Page {pageNumber} of {numPages}
-        </p>
+        <div className="center-content">
+          <p>
+            Page {pageNumber} of {numPages}
+          </p>
+          <a id="download-icon" href={pdfFilePath} target="blank">
+            <FaFileDownload />
+          </a>
+        </div>
 
         {pageNumber > numPages - 1 ? (
           <Button
