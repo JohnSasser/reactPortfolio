@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.3ffb0fb1.chunk.css",
-    "main.js": "/static/js/main.28da4d44.chunk.js",
-    "main.js.map": "/static/js/main.28da4d44.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c42a9baa.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c42a9baa.js.map",
-    "static/css/2.150d169a.chunk.css": "/static/css/2.150d169a.chunk.css",
-    "static/js/2.72777cd5.chunk.js": "/static/js/2.72777cd5.chunk.js",
-    "static/js/2.72777cd5.chunk.js.map": "/static/js/2.72777cd5.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.150d169a.chunk.css.map": "/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.3ffb0fb1.chunk.css.map": "/static/css/main.3ffb0fb1.chunk.css.map",
-    "static/js/2.72777cd5.chunk.js.LICENSE.txt": "/static/js/2.72777cd5.chunk.js.LICENSE.txt",
-    "static/js/pdf.worker.entry.6ac999ed.worker.js": "/static/js/pdf.worker.entry.6ac999ed.worker.js",
-    "static/js/pdf.worker.entry.6ac999ed.worker.js.LICENSE.txt": "/static/js/pdf.worker.entry.6ac999ed.worker.js.LICENSE.txt",
-    "static/js/pdf.worker.entry.6ac999ed.worker.js.map": "/static/js/pdf.worker.entry.6ac999ed.worker.js.map",
-    "static/media/style.css": "/static/media/Wave-footer-2.bc63aa9e.svg",
-    "static/media/headshot-brick-scarf.00d5011c.jpg": "/static/media/headshot-brick-scarf.00d5011c.jpg",
-    "static/media/software-engineer-resume.5232d951.pdf": "/static/media/software-engineer-resume.5232d951.pdf"
+    "main.css": "/reactPortfolio/static/css/main.1aff682c.chunk.css",
+    "main.js": "/reactPortfolio/static/js/main.9e540970.chunk.js",
+    "main.js.map": "/reactPortfolio/static/js/main.9e540970.chunk.js.map",
+    "runtime-main.js": "/reactPortfolio/static/js/runtime-main.c536d151.js",
+    "runtime-main.js.map": "/reactPortfolio/static/js/runtime-main.c536d151.js.map",
+    "static/css/2.150d169a.chunk.css": "/reactPortfolio/static/css/2.150d169a.chunk.css",
+    "static/js/2.edf81fee.chunk.js": "/reactPortfolio/static/js/2.edf81fee.chunk.js",
+    "static/js/2.edf81fee.chunk.js.map": "/reactPortfolio/static/js/2.edf81fee.chunk.js.map",
+    "index.html": "/reactPortfolio/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/reactPortfolio/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.1aff682c.chunk.css.map": "/reactPortfolio/static/css/main.1aff682c.chunk.css.map",
+    "static/js/2.edf81fee.chunk.js.LICENSE.txt": "/reactPortfolio/static/js/2.edf81fee.chunk.js.LICENSE.txt",
+    "static/js/pdf.worker.entry.ec39246a.worker.js": "/reactPortfolio/static/js/pdf.worker.entry.ec39246a.worker.js",
+    "static/js/pdf.worker.entry.ec39246a.worker.js.LICENSE.txt": "/reactPortfolio/static/js/pdf.worker.entry.ec39246a.worker.js.LICENSE.txt",
+    "static/js/pdf.worker.entry.ec39246a.worker.js.map": "/reactPortfolio/static/js/pdf.worker.entry.ec39246a.worker.js.map",
+    "static/media/style.css": "/reactPortfolio/static/media/Wave-footer-2.bc63aa9e.svg",
+    "static/media/headshot-brick-scarf.00d5011c.jpg": "/reactPortfolio/static/media/headshot-brick-scarf.00d5011c.jpg",
+    "static/media/software-engineer-resume.5232d951.pdf": "/reactPortfolio/static/media/software-engineer-resume.5232d951.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.c42a9baa.js",
+    "static/js/runtime-main.c536d151.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.72777cd5.chunk.js",
-    "static/css/main.3ffb0fb1.chunk.css",
-    "static/js/main.28da4d44.chunk.js"
+    "static/js/2.edf81fee.chunk.js",
+    "static/css/main.1aff682c.chunk.css",
+    "static/js/main.9e540970.chunk.js"
   ]
 }
