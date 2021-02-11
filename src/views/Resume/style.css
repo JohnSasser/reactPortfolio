@@ -1,7 +1,7 @@
 #resume-page-container {
-    height: 91vh;
+    height: 80vh;
     width: 100vw;
-    background: linear-gradient(to bottom right, #f75276, #94949458);
+    background: linear-gradient(to bottom, #FFD3B5, #ffffff);
     color: white;
 }
 

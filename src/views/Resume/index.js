@@ -6,16 +6,17 @@ import { FaFileDownload } from 'react-icons/fa';
 import resume from '../../software-engineer-resume.pdf';
 
 import './style.css';
+import Footer from '../../components/Footer';
 
 let pdfFilePath = process.env.PUBLIC_URL + '/software-engineer-resume.pdf';
 
 export default function Resume() {
-  const [file, setFile] = useState(resume);
+  // const [file, setFile] = useState();
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
 
   function onDocumentLoadSuccess({ numPages }) {
-    setFile(pdfFilePath);
+    // setFile(pdfFilePath);
     setNumPages(numPages);
   }
 
@@ -103,13 +104,12 @@ export default function Resume() {
         <Document
           id="react-pdf-doc"
           file={pdfFilePath}
-          // file={pdfFilePath}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <Page pageNumber={pageNumber} />
-          {/* <Page pageNumber={pageNumber + 1} /> */}
         </Document>
       </div>
+      <Footer />
     </div>
   );
 }
