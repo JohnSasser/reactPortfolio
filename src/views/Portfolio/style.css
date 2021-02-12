@@ -1,21 +1,16 @@
 #portfolio-container {
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     background: linear-gradient(to bottom, #FFAAA6, #ffffff);
     display: grid;
     grid-template-columns: 33.3vw 33.3vw 33.35vw;
     align-items: center;
-    /* display: flex;
-    align-items: center;
-    justify-content: space-between; */
     z-index: 1;
 }
 
 .project-card-container {
     height: 40vh;
     width: 30vw;
-    /* max-width: 33vw;
-    max-height: 50vh; */
     background-color: rgba(255, 255, 255, 0.65);
     margin: 2em;
     border-radius: 8px;
@@ -28,8 +23,6 @@
 
 /* PORTFOLIO CARD ANIMATIONS */
 .project-card-container :hover {
-    /* height: 90%; 
-    width: 90%; */
     cursor: pointer;
     transform: perspective(1500px) rotateX(0deg) rotateY(0deg) scale3d(1.1,1.1,1.1);
 }
@@ -38,6 +31,7 @@
 .project-image {
    width: 80%;
    height: 80%;
+   border-radius: 5px;
 }
 
 .project-image :hover {
@@ -46,15 +40,18 @@
 
 
 /* SELECTED PROJECT */
-
-
 .selected-project-card-container {
     height: 80vh;
     width: 100vw;
-    background: linear-gradient(to bottom, #7c2b28aa, #ffffff);
+    background: linear-gradient(to bottom, #41674764, #ffffff);
 }
 
 .selected-project-image {
     max-height: 60vh;
     max-width: 50vw;
+}
+
+.hidden {
+    height: 0vh;
+    width: 0vw;
 }
