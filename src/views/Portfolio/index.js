@@ -7,49 +7,24 @@ import {
   Switch,
 } from 'react-router-dom';
 import Footer from '../../components/Footer';
+import { appObjects } from '../../utils/appObject';
 
 import './style.css';
-
-const appObjects = {
-  dataExplorer: {
-    name: 'Atl Metro Housing Data Explorer',
-    routeTitle: 'dataExplorer',
-    imagePath: '/images/MAHS-data-explorer.png',
-    backgroundColor: '#537a8e',
-  },
-  dataNexus: {
-    name: 'Data Nexus',
-    routeTitle: 'dataNexus',
-    imagePath: '/images/dataNexus.png',
-    backgroundColor: '#41674764',
-  },
-
-  evictionTracker: {
-    name: 'Atl Metro Housing Eviction Tracker',
-    routeTitle: 'evictionTracker',
-    imagePath: '/images/ATL-eviction-tracker.png',
-    backgroundColor: '#7c2b28aa',
-  },
-};
+import { Button } from 'react-bootstrap';
 
 const Portfolio = () => {
   let { path, url } = useRouteMatch();
-  console.log('path', path, ' || url', url);
-  const [clickedApp, setClickedApp] = useState(false);
-  console.log('clickedApp: ', clickedApp);
+  // console.log('path', path, ' || url', url);
 
   function ProjectCard() {
+    const { projectID } = useParams();
+    // console.log(appObjects[projectID].imagePath);
+
     // The <Route> that rendered this component has a
     // path of `/topics/:projectID`. The `:projectID` portion
     // of the URL indicates a placeholder that we can
     // get from `useParams()`.
-    const { projectID } = useParams();
-    console.log(projectID);
-    // setClickedApp(false);
-    // names the app-link objects names after the route name so,
-    // we can key directly into the object;
 
-    // console.log(appObjects[projectID].imagePath);
     return (
       <>
         <div
@@ -58,6 +33,28 @@ const Portfolio = () => {
             background: `linear-gradient(to bottom, ${appObjects[projectID].backgroundColor}, #ffffff)`,
           }}
         >
+          <div className="selected-project-description-div">
+            <span className="selected-project-description">
+              {' '}
+              {appObjects[projectID].description}
+            </span>
+            <br />
+            <span className="selected-project-role">
+              {' '}
+              {appObjects[projectID].role}
+            </span>
+            <br />
+            <Button className="selected-project-link-button">
+              <a
+                className="selected-project-link"
+                href={appObjects[projectID].link}
+                target="blank"
+                noreferrer="true"
+              >
+                Visit Live App
+              </a>
+            </Button>
+          </div>
           <img
             className="selected-project-image"
             alt={appObjects[projectID].name}
@@ -66,46 +63,45 @@ const Portfolio = () => {
             noreferrer="true"
           />
         </div>
+        <Footer />
       </>
     );
   }
 
   return (
     <>
-      <div id="portfolio-container">
-        {Object.values(appObjects).map((x, idx) => {
-          // let index = x[idx];
-          return (
-            <Link
-              to={`${url}/${x.routeTitle}`}
-              key={x.imagePath[idx]}
-              className={`project-card-container ${
-                clickedApp ? 'hidden' : 'visible'
-              }`}
-              onClick={() => setClickedApp(true)}
-            >
-              <img
-                key={x.imagePath[idx]}
-                className={`project-card-container ${
-                  clickedApp ? 'hidden' : 'visible'
-                }`}
-                alt={x.name}
-                src={process.env.PUBLIC_URL + `${x.imagePath}`}
-                target="blank"
-                noreferrer="true"
-              />
-            </Link>
-          );
-        })}
-        <Switch>
-          <Route exact path={path}></Route>
-          <Route path={`${path}/:projectID`}>
-            <ProjectCard />
-          </Route>
-        </Switch>
+      <Switch>
+        <Route exact path={url}>
+          <div id="portfolio-container">
+            {Object.values(appObjects).map((x, idx) => {
+              // let index = x[idx];
+              return (
+                <Link
+                  to={`${url}/${x.routeTitle}`}
+                  key={x.imagePath[idx]}
+                  className={`project-card-container`}
+                >
+                  <img
+                    key={x.imagePath[idx]}
+                    className={`project-card-container ${
+                      path === `${path}/:projectID` ? 'hidden' : 'visible'
+                    }`}
+                    alt={x.name}
+                    src={process.env.PUBLIC_URL + `${x.imagePath}`}
+                    target="blank"
+                    noreferrer="true"
+                  />
+                </Link>
+              );
+            })}
+            <Footer />
+          </div>
+        </Route>
 
-        <Footer />
-      </div>
+        <Route path={`${url}/:projectID`}>
+          <ProjectCard />
+        </Route>
+      </Switch>
     </>
   );
 };
