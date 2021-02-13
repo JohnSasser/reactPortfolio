@@ -38,7 +38,7 @@ const Portfolio = () => {
               {' '}
               {appObjects[projectID].description}
             </span>
-            <br />
+            <br /> <br />
             <span className="selected-project-role">
               {' '}
               {appObjects[projectID].role}
@@ -83,9 +83,7 @@ const Portfolio = () => {
                 >
                   <img
                     key={x.imagePath[idx]}
-                    className={`project-card-container ${
-                      path === `${path}/:projectID` ? 'hidden' : 'visible'
-                    }`}
+                    className={`project-image`}
                     alt={x.name}
                     src={process.env.PUBLIC_URL + `${x.imagePath}`}
                     target="blank"

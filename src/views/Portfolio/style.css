@@ -1,5 +1,5 @@
 #portfolio-container {
-    height: 90vh;
+    height: 85vh;
     width: 100vw;
     background: linear-gradient(to bottom, #FFAAA6, #ffffff);
     display: grid;
@@ -41,9 +41,9 @@
 
 /* SELECTED PROJECT */
 .selected-project-card-container {
-    height: 90vh;
+    height: 85vh;
     width: 100vw;
-    background: linear-gradient(to bottom, #41674764, #ffffff);
+    background: linear-gradient(to bottom, #e88300aa, #ffffff);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,7 +82,3 @@
     width: 100%;
     color: white;
 }
-/* .hidden {
-    height: 0vh;
-    width: 0vw;
-} */
