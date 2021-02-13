@@ -1,18 +1,21 @@
 #portfolio-container {
-    height: 85vh;
+    top: 10vh;
+    height: 80vh;
     width: 100vw;
-    background: linear-gradient(to bottom, #FFAAA6, #ffffff);
-    display: grid;
-    grid-template-columns: 33.3vw 33.3vw 33.35vw;
+    background: linear-gradient(to bottom, #ffafaf, #ffffff);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     align-items: center;
     z-index: 1;
+    margin-bottom: 5vh;
 }
 
 .project-card-container {
-    height: 40vh;
+    height: 28vh;
     width: 30vw;
     background-color: rgba(255, 255, 255, 0.65);
-    margin: 2em;
+    margin: 2.5em;
     border-radius: 8px;
     z-index: 99999999;
     display: flex;
@@ -60,21 +63,22 @@
     background-color: rgba(7, 7, 7, 0.556);
     border-radius: 8px;
     color: white;
-    font-size: 1.75em;
-    height: 45vh;
+    font-size: 1.55em;
+    /* height: 45vh; */
     justify-content: center;
     align-items: center;
     padding: 1.5em;
+    width: 35vw;
 }
 
 .selected-project-image {
     max-height: 60vh;
-    max-width: 42vw;
+    max-width: 45vw;
     border-radius: 4px;
 }
 
 .selected-project-link-button {
-    margin: 1.5em;
+    margin: 1em;
 }
 
 .selected-project-link {

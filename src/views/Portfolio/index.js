@@ -44,16 +44,16 @@ const Portfolio = () => {
               {appObjects[projectID].role}
             </span>
             <br />
-            <Button className="selected-project-link-button">
-              <a
-                className="selected-project-link"
-                href={appObjects[projectID].link}
-                target="blank"
-                noreferrer="true"
-              >
-                Visit Live App
-              </a>
-            </Button>
+            <a
+              className="selected-project-link"
+              href={appObjects[projectID].link}
+              target="blank"
+              noreferrer="true"
+            >
+              <Button className="selected-project-link-button">
+                Visit Live App{' '}
+              </Button>
+            </a>
           </div>
           <img
             className="selected-project-image"
