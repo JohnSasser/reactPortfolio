@@ -10,7 +10,7 @@
     color: #ffffff;
     width: 100vw;
     height: 12vh;
-    background-image: url(../../Wave-footer-2.svg);
+    background-image: url(../../Wave-footer-3.svg);
 }
 
 .loading-io-attribution {
@@ -29,18 +29,15 @@
 .loading-io-attribution > a {
     padding: .5em;
     font-size: smaller;
-    color: #f6bebe;
+    color: #f18686d7;
     text-decoration: none;   
 }   
 
 .name-date {
     cursor: none;
-    padding-top: .5em;
+    padding-top: 1em;
     font-size: 1.25em;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
-/* .footer-parent-div > a  {
-
-} */

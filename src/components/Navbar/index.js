@@ -19,7 +19,7 @@ const Navbar = props => {
           Portfolio
         </Link>
 
-        <Link id="homepage-link" to="/" style={{ padding: '0 2em' }}>
+        <Link id="homepage-link" to="/reactPortfolio" style={{ padding: '0 2em' }}>
           Home
         </Link>
 

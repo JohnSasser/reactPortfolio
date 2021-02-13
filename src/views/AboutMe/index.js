@@ -13,17 +13,11 @@ const AboutMe = () => {
   const backEndVectors = [];
   const toolsVectors = [];
 
-  frontEndSVGs.map(vector => {
-    frontEndVectors.push(vector);
-  });
+  frontEndSVGs.map(vector => frontEndVectors.push(vector));
 
-  backEndSVGs.map(vector => {
-    backEndVectors.push(vector);
-  });
+  backEndSVGs.map(vector => backEndVectors.push(vector));
 
-  toolsSVGs.map(vector => {
-    toolsVectors.push(vector);
-  });
+  toolsSVGs.map(vector => toolsVectors.push(vector));
 
   return frontEndVectors && backEndSVGs ? (
     <>
