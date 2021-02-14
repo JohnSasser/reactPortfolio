@@ -74,7 +74,6 @@ const Portfolio = () => {
         <Route exact path={url}>
           <div id="portfolio-container">
             {Object.values(appObjects).map((x, idx) => {
-              // let index = x[idx];
               return (
                 <Link
                   to={`${url}/${x.routeTitle}`}

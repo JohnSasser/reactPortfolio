@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Homepage from './views/Homepage';
 import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
+
 import Portfolio from './views/Portfolio';
 import ContactMe from './views/ContactMe';
 import AboutMe from './views/AboutMe';
@@ -15,7 +15,6 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        {/* <Homepage /> */}
         <Route exact path="/">
           <Homepage />
         </Route>
@@ -25,9 +24,6 @@ function App() {
         <Route path="/about-me">
           <AboutMe />
         </Route>
-        {/* <Route exact path="/portfolio">
-          <Portfolio />
-        </Route> */}
         <Route path="/portfolio">
           <Portfolio />
         </Route>
