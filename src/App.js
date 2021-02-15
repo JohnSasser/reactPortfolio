@@ -15,7 +15,6 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        {/* <Homepage /> */}
         <Route exact path="/">
           <Homepage />
         </Route>
@@ -25,9 +24,6 @@ function App() {
         <Route path="/about-me">
           <AboutMe />
         </Route>
-        {/* <Route exact path="/portfolio">
-          <Portfolio />
-        </Route> */}
         <Route path="/portfolio">
           <Portfolio />
         </Route>

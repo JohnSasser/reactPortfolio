@@ -5,6 +5,7 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+import { Normalize } from 'styled-normalize';
 import { BrowserRouter } from 'react-router-dom';
 // bootstrap stylesheet
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
+    <Normalize />
     <GlobalStyle />
     <BrowserRouter>
       <App />
